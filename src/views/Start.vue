@@ -8,7 +8,7 @@ const level = ref(3);
 <template>
     <div class="welcome-board">
         <div class="state-container center">
-            <span>Difficulty</span>
+            <span>Level</span>
             <div>
                 <div>
                     <input type="radio" name="level" id="easy" :value="3" v-model="level" checked />

@@ -133,7 +133,7 @@ a {
 }
 
 .tile:hover:not(.blank-tile) {
-    background-color: var(--bg-dark);
+    /* background-color: var(--bg-dark); */
     transform: scale(1.05);
 }
 
