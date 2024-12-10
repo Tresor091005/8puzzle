@@ -148,3 +148,56 @@ a {
 .blank-tile {
     background-color: var(--bg-light);
 }
+
+/* Masquer les radios par défaut */
+input[type="radio"] {
+    display: none;
+}
+
+/* Créer un fond personnalisé pour le bouton radio */
+input[type="radio"] + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* Créer un cercle pour le radio button */
+input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--dark);
+    background-color: var(--bg-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style du cercle au survol */
+input[type="radio"]:hover + label::before {
+    background-color: var(--bg-dark);
+    border-color: var(--text);
+}
+
+/* Style lorsque le bouton radio est sélectionné */
+input[type="radio"]:checked + label::before {
+    background-color: #006400;
+    border-color: #006400;
+}
+
+/* Ajouter une coche dans le cercle pour indiquer que l'option est sélectionnée */
+input[type="radio"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: white;
+}
