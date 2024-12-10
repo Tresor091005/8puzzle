@@ -10,17 +10,17 @@ const level = ref(3);
         <div class="state-container center">
             <span>Level</span>
             <div>
-                <div>
+                <div style="margin-bottom: 5px;">
                     <input type="radio" name="level" id="easy" :value="3" v-model="level" checked />
                     <label for="easy" class="me-4">Easy</label>
                 </div>
 
-                <div>
+                <div style="margin-bottom: 5px;">
                     <input type="radio" name="level" id="medium" :value="4" v-model="level" />
                     <label for="medium" class="me-4">Medium</label>
                 </div>
 
-                <div>
+                <div style="margin-bottom: 5px;">
                     <input type="radio" name="level" id="hard" :value="5" v-model="level" />
                     <label for="hard">Difficult</label>
                 </div>
