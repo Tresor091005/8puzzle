@@ -1,0 +1,150 @@
+/* General Styles */
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+    --dark: #111;
+    --bg-dark: #222;
+    --bg: #333;
+    --bg-light: #444;
+    --text: #ddd;
+    --solved: rgba(50, 255, 50, 0.2);
+    --highlight: #ec1800;
+    /* Accent color for shuffle button */
+    --primary-blue: #007bce;
+    /* Accent color for solve button */
+    --tile-bg: #60bcee;
+    /* Background color for tiles */
+}
+
+/* Body Styles */
+body {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #000e11;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Welcome and Game Container */
+.welcome-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    user-select: none;
+    color: var(--text);
+    /* background-color: var(--bg-dark); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* State Container (Timer, Moves) */
+.state-container {
+    min-width: 250px;
+    justify-content: space-around;
+    display: flex;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-light);
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px var(--dark);
+    transition: background-color 0.3s ease;
+}
+
+.state-container.center {
+    align-items: center;
+}
+
+/* Buttons */
+.new-game {
+    border-radius: 5px;
+    background-color: var(--bg-light);
+    color: var(--text);
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: 1px 1px 1.5px 1.5px var(--dark);
+    border-width: 0.6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-game:hover {
+    background-color: var(--bg);
+    transform: scale(1.05);
+}
+
+a {
+    color: var(--text);
+}
+
+/* Gameboard */
+.board-table {
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.solved {
+    background-color: var(--solved);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group button {
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+    background-color: var(--bg-light);
+}
+
+/* Tile Styles */
+.tile {
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--tile-bg);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tile:hover:not(.blank-tile) {
+    background-color: var(--bg-dark);
+    transform: scale(1.05);
+}
+
+.success {
+    background-color: #006400;
+}
+
+.error {
+    background-color: var(--highlight);
+}
+
+.blank-tile {
+    background-color: var(--bg-light);
+}
