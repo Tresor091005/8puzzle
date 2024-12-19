@@ -109,8 +109,4 @@ function onTileClicked(clickedIndex) {
     <button @click="$emit('quit-game')" class="new-game">Quit</button>
   </div>
 
-  <a href="https://github.com/gameric/8-puzzle" v-if="timer > 30 && !isSolved">
-    Don't know how to solve?
-  </a>
-
 </template>
